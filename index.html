@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>برای ثنام جون ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: Tahoma, sans-serif;
+    background: linear-gradient(135deg, #ffb6c1, #f6c4e8, #d8b4fe);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 25px 15px 50px;
+}
+
+
+.card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255,255,255,0.95);
+    width: 100%;
+    max-width: 460px;
+    padding: 30px 24px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 15px 50px #a33b7040;
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+.heart {
+    font-size: 60px;
+    animation: heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat {
+    50% { transform: scale(1.15); }
+}
+
+h1 {
+    color: #df4b83;
+    font-size: 24px;
+}
+
+p {
+    color: #555;
+    line-height: 2.2;
+    font-size: 14px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    min-height: 65px;
+}
+
+button {
+    border: none;
+    padding: 14px 20px;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#yes {
+    background: #e75480;
+    color: white;
+    box-shadow: 0 5px 15px #e7548050;
+}
+
+#no {
+    background: #eee;
+    color: #555;
+    transition: left .3s ease, top .3s ease;
+}
+
+#message {
+    display: none;
+    margin-top: 22px;
+    padding: 16px;
+    border-radius: 16px;
+    background: #fff0f5;
+    color: #d94379;
+    font-size: 15px;
+    line-height: 2.2;
+    animation: appear .5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signature {
+    color: #c77a9d;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+/* قلب های متحرک */
+.floating-heart {
+    position: fixed;
+    bottom: -40px;
+    color: rgba(255,255,255,0.85);
+    font-size: 22px;
+    pointer-events: none;
+    z-index: 1;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="heart">❤️</div>
+
+    <h1>برای ثنام جونم</h1>
+
+    <p>
+        ثنام جونم ❤️
+        <br>
+        به خاطر اتفاقات دیروز ازت معذرت می‌خوام.
+        ببخش که دیروز ناراحتت کردم.
+        واقعاً دلم نمی‌خواست باعث ناراحتیت بشم.
+        <br>
+        شاید نتونم تمام ناراحتی‌ای که به وجود آوردم
+        رو جبران کنم، اما می‌خوام بدونی که از ته دلم
+        بابتش متأسفم.
+        <br>
+        بودنت برام خیلی ارزشمنده و اصلاً دوست ندارم
+        ناراحتی یا دلخوری بینمون باقی بمونه.
+        <br>
+        نمی‌خوام فقط با چند تا کلمه همه‌چیز رو
+        درست‌شده فرض کنم؛ فقط امیدوارم بهم فرصت بدی
+        تا با رفتارم نشون بدم چقدر برام مهمی.
+        <br>
+        ثنام جونم، می‌تونی منو ببخشی؟ 🥺❤️
+    </p>
+
+    <div class="buttons">
+
+        <button id="yes" onclick="forgive()">
+            می‌بخشم ❤️
+        </button>
+
+        <button id="no" onclick="notForgive()">
+            نمی‌بخشم 💔
+        </button>
+
+    </div>
+
+    <div id="message"></div>
+
+    <div class="signature">
+        با یه دنیا عذرخواهی ❤️
+    </div>
+
+</div>
+
+<script>
+
+const noButton = document.getElementById("no");
+const message = document.getElementById("message");
+
+function forgive() {
+    message.style.display = "block";
+
+    message.innerHTML =
+    "❤️ ممنونم ثنام جونم!<br>" +
+    "این فرصت برام خیلی ارزشمنده.<br>" +
+    "دوست دارم ❤️";
+
+    document.getElementById("yes").style.display = "none";
+    noButton.style.display = "none";
+}
+
+function notForgive() {
+
+    message.style.display = "block";
+
+    message.innerHTML =
+    "نههه ثنام جونم 🥺💔<br>" +
+    "ببخش دیگه... یه فرصت دیگه بهم بده ❤️";
+
+    const maxX = window.innerWidth - noButton.offsetWidth - 20;
+    const maxY = window.innerHeight - noButton.offsetHeight - 20;
+
+    noButton.style.position = "fixed";
+    noButton.style.left =
+        (10 + Math.random() * Math.max(0, maxX - 10)) + "px";
+
+    noButton.style.top =
+        (10 + Math.random() * Math.max(0, maxY - 10)) + "px";
+
+    noButton.style.zIndex = "10";
+}
+
+// ساخت قلب های شناور
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "floating-heart";
+
+    const hearts = ["❤️", "💕", "💗", "💖", "🤍"];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 22) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 9000);
+}
+
+setInterval(createHeart, 450);
+
+</script>
+
+</body>
+</html>
